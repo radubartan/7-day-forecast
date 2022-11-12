@@ -1,7 +1,7 @@
 
 
 .App-header {
-  background-color: #d3d6dd;
+  /* background-color: #d3d6dd; */
   /* min-height: 100vh; */
   /* display: flex;
   flex-direction: column;
@@ -12,3 +12,219 @@
 }
 
 
+#header { margin: 8px 0px 0px 0px; }
+.header_caps {
+   color: red;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 14px;   
+   text-transform: capitalize;
+	color: #616060;
+	font-weight: 600;
+}
+.header_subtitle {
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: #B9B7B7;
+   font-size: 12px;
+   margin-top: -2px;
+}
+#header li {
+	display: inline-block;
+	margin-right: 25px;
+	cursor: pointer;
+}
+#selection_table,
+#requirements,
+#bugs,
+#about_me {
+	margin: 30px 30px 40px 39px;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 14px;
+	color: #707070;
+}
+
+.topBar {
+	border-bottom: solid 1px #f0f0f0;
+	text-align: right;
+	padding: 0px 9px 0px 0px;
+	margin-left: 0px;
+	margin-top: 0px;
+}
+.logo_Wunder {	margin: 10px 0px 5px 10px; }
+.icons_topMenu { margin-top: 0px; padding-left: 9px; }
+.icon_bug { height: 17px; margin: 0px 5px -3px 0px; }
+.icon_available_missing { height: 11px; margin: 0px 5px -1px 0px; }
+.topMenu { margin-top: 9px; }
+.breadcrumbs { margin: 0px 0px 0px 40px; }
+.breadcrumb_arrow { margin: 7px 12px 0px 12px; }
+.breadcrumb_text {
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: #707070;
+   font-size: 14px;
+   margin-left: -2px;
+   margin-top: 6px;
+}
+.line_smallLeft {
+   border-bottom: solid 1px #707070;
+   width: 21px;
+   margin: 10px 0px 20px 2px;
+}
+.left_headingPink {
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: #0099CC;
+   font-weight: 600;
+   font-size: 14px;
+}
+.left_subHeading {
+   margin: 4px 0px 8px 10px;
+   color: #B9B7B7;
+   font-size: 14px;
+}
+.line_bigRightDark {
+   border-bottom: solid 1px #707070;
+   width: 112px;
+   margin: 10px 0px 20px -1px;
+}
+.line_bigRightLight {
+   /* border-bottom: solid 1px #B9B7B7; */
+   border-bottom: solid 1px #EFEFEF;
+   width: 124px;
+   margin: 10px 0px 20px 0px;
+}
+.line_AboutUs {
+   border-bottom: solid 1px #EFEFEF;
+   width: 124px;
+   margin: 10px 0px 20px 0px;
+}
+.line_grayLight_variable { border-bottom: solid 1px #e5e5e5; }
+
+.bodyText {
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: #707070;
+   font-size: 14px;
+}
+.footerText_gray {
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: #B9B7B7;
+   font-size: 12px;
+}
+.footerText_pink {
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: #0099CC;
+   font-size: 12px;
+}
+.footer-hover-underline-animation {
+   display: inline-block;
+   position: relative;
+   color: #B9B7B7;
+   cursor: pointer;
+}
+.footer-hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #B9B7B7;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.footer-hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.breadcrumbs-hover-underline-animation {
+   display: inline-block;
+   position: relative;
+   color: #707070;
+   cursor: pointer;
+}
+.breadcrumbs-hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #707070;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.breadcrumbs-hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.boxGreyLighter { padding: 0px 2px 0px 2px; font-size: 97%; background-color: #F8F9FA; }
+.boxGreyDarker { padding: 0px 3px 0px 3px; font-size: 97%; background-color: #F2F2F2; }
+.boxGreyDarkerMorePadding { color: #777777; background: #F2F2F2; font-size: 11px; font-weight: 400; padding: 2px 5px; }
+.boxYellow { background-color: yellow; }
+.spacer-5px  { padding-top: 5px;  }
+.spacer-10px { padding-top: 10px; }
+.spacer-15px { padding-top: 15px; }
+.spacer-20px { padding-top: 20px; }
+.spacer-30px { padding-top: 30px; }
+.spacer-31px { padding-top: 31px; }
+.spacer-40px { padding-top: 40px; }
+.mb10px { margin-bottom: 10px; }
+.mr10px { margin-right: 10px; }
+
+/* navbar */
+ul.topMenu li { display:inline; }
+
+/* table styles */
+[id="tbl"] th td {  padding-right: 2px; }
+#bootstrapOverride table { 
+   width: 100%;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: #707070;
+   font-size: 14px;
+   border-collapse: collapse;
+}
+/* .cell-selectedCount { width: 300px; } */
+.cell-heading { 
+   font-weight: 400; 
+   text-transform: uppercase; 
+   color: #707070;
+   /* background-color: #EFEFEF; */
+   background-color: #FCFCFD;
+   border-bottom: 1px solid #969696;
+   border-right: 5px solid #FCFCFD;
+   padding: 3px 0px 3px 3px;
+}
+.cell-caption {
+   color: #969696;
+   font-style: italic;
+   padding: 6px 0px 6px 3px;
+   color: #BCBCBC;
+}
+.td-styles { 
+   border-bottom: 1px solid #EFEFEF;
+   padding: 6px 0px 6px 3px;
+}
+.td-caption { padding: 0px 0px 8px 0px; }
+.tr-styles:hover td {
+   /* background-color: #EFEFEF; */ /* v1 */
+   /* background-color: #FCFCFC; */ /* v2 */
+   background-color: aliceblue;
+}
+.color-lightGray { color: #E2E2E2; }
+.color-gray { color: #BCBCBC; }
+.color-darkGray { color: #707070; }
+/* a { text-decoration: none; }
+a:hover { text-decoration: underline; } */
+.link-breadcrumb { text-decoration: none; color: #707070; }
+.link-footer { text-decoration: none; color: #B9B7B7; }
+.link-downloadSelected { text-decoration: none; color: #B9B7B7; }
+.icon_status { height: 11px; padding-right: 3px; margin-bottom: -1px; }
+.linkCodeDescription { text-decoration: none; color: #0099CC; } /* #0099CC #696969 */
+.linkCodeDescription:hover { text-decoration: underline; color: #0099CC; } /* #0099CC #696969 */
+.linkCodeDescriptionLightGray { color: #CCCCCC; }
+.linkCodeDescriptionLightGray:hover { color: #CCCCCC; }
+.color-persianBlue { color: #0099CC; }
+.checkBox-persianBlue { accent-color: #0099CC; }
+
+.selected { background-color: #6ccbfb; color: #fff; }
+.hangingIndent { padding-left: 24px; text-indent: -15px; }
+.responsive { width: 100%; height: auto; }
