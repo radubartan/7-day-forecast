@@ -1,5 +1,6 @@
 import './App.css';
 import { useRef } from 'react';
+import Search from './components/search/search.js';
 
 function App() {
    // scroll to element code for menu links
@@ -61,6 +62,7 @@ function App() {
          </div>
 
          {/* SELECTION TABLE */}
+         
          <div id="selection_table" ref={refSelection}>
             <div className="row">
                <div className="col-3">
@@ -70,7 +72,8 @@ function App() {
                </div>
                <div className="col-9">
                   <div className="line_bigRightLight"></div>
-                  <div id="tbl"></div>
+                  <Search />
+
                </div>
             </div>
          </div>
