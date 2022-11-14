@@ -1,6 +1,5 @@
 import './App.css';
 import { useRef } from 'react';
-import Search from './components/search/search.js';
 
 function App() {
    // scroll to element code for menu links
@@ -72,7 +71,7 @@ function App() {
                </div>
                <div className="col-9">
                   <div className="line_bigRightLight"></div>
-                  <Search />
+                  
 
                </div>
             </div>
