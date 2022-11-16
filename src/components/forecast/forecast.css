@@ -1,0 +1,32 @@
+.forecastContainer {
+   margin-top: 20px;
+}
+.daily-item {
+   /* box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 3%); */
+   height: 40px;
+   margin: 5px;
+   display: flex;
+   align-items: center;
+   font-size: 14px;
+   padding: 5px 20px;
+}
+.icon-small {
+   width: 40px;
+   opacity: 0.5;
+}
+.day {
+   flex: 1 1;
+   font-weight: 600;
+   margin-left: 15px;
+}
+.description {
+   flex: 1 1;
+   margin-right: 12px;
+   text-align: right;
+}
+.min-max {
+   color: #0099CC;
+}
+.colorMax {
+   color: #BCBCBC;
+}

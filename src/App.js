@@ -1,6 +1,7 @@
 import './App.css';
 import { useRef, useState } from 'react';
 import Search from './components/search/search.js';
+import Forecast from "./components/forecast/forecast.js";
 import CurrentWeather from './components/current-weather/current-weather';
 import { WEATHER_API_URL, WEATHER_API_KEY } from './api';
 
@@ -10,8 +11,8 @@ function App() {
    const handleSelectionClick = () => { refSelection.current?.scrollIntoView({ behavior: 'smooth' }); }
    const refRequirements = useRef(null);
    const handleRequirementsClick = () => { refRequirements.current?.scrollIntoView({ behavior: 'smooth' }); }
-   const refBugs = useRef(null);
-   const handleBugsClick = () => { refBugs.current?.scrollIntoView({ behavior: 'smooth' }); }
+   // const refBugs = useRef(null);
+   // const handleBugsClick = () => { refBugs.current?.scrollIntoView({ behavior: 'smooth' }); }
    const refAboutMe = useRef(null);
    const handleAboutMeClick = () => { refAboutMe.current?.scrollIntoView({ behavior: 'smooth' }); }
 
@@ -19,20 +20,19 @@ function App() {
    const [forecast, setForecast] = useState(null);
 
    const handleOnSearchChange = (searchData) => {
-      const[lat, lon] = searchData.value.split(" ");
+      const [lat, lon] = searchData.value.split(" ");
       const currentWeatherFetch = fetch(`${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=imperial`);
       const forecastFetch = fetch(`${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=imperial`);
       Promise.all([currentWeatherFetch, forecastFetch])
-         .then(async(response) => {
+         .then(async (response) => {
             const weatherResponse = await response[0].json();
             const forecastResponse = await response[1].json();
-            setCurrentWeather({city: searchData.label, ...weatherResponse});
-            setForecast({city: searchData.label, ...forecastResponse});
+            setCurrentWeather({ city: searchData.label, ...weatherResponse });
+            setForecast({ city: searchData.label, ...forecastResponse });
          })
          .catch((err) => console.log(err));
    }
 
-   console.log(currentWeather);
    console.log(forecast);
 
    return (
@@ -70,10 +70,10 @@ function App() {
                      <div className="header_caps">REQUIREMENTS</div>
                      <div className="header_subtitle">Completion Status</div>
                   </li>
-                  <li onClick={handleBugsClick}>
+                  {/* <li onClick={handleBugsClick}>
                      <div className="header_caps">CODE</div>
                      <div className="header_subtitle">How it works</div>
-                  </li>
+                  </li> */}
                   <li onClick={handleAboutMeClick}>
                      <div className="header_caps">ABOUT ME</div>
                      <div className="header_subtitle">Portfolio <span className="color-lightGray">&amp;</span> Experience</div>
@@ -83,8 +83,7 @@ function App() {
             <div className="col-1"></div>
          </div>
 
-         {/* SELECTION TABLE */}
-
+         {/* WEATHER FORECAST */}
          <div id="selection_table" ref={refSelection}>
             <div className="row">
                <div className="col-3">
@@ -95,7 +94,14 @@ function App() {
                <div className="col-9">
                   <div className="line_bigRightLight"></div>
                   <Search onSearchChange={handleOnSearchChange} />
-                  {currentWeather && <CurrentWeather data={currentWeather}/>}
+                  <div className="row">
+                     <div className="col-5">
+                        {currentWeather && <CurrentWeather data={currentWeather} />}
+                     </div>
+                     <div className="col-7 forecastContainer">
+                        {forecast && <Forecast data={forecast} />}
+                     </div>
+                  </div>
                </div>
             </div>
          </div>
@@ -134,7 +140,7 @@ function App() {
          </div>
 
          {/* CODE */}
-         <div id="bugs" ref={refBugs}>
+         {/* <div id="bugs" ref={refBugs}>
             <div className="row">
                <div className="col-3">
                   <div className="spacer-31px"></div>
@@ -160,7 +166,7 @@ function App() {
                   <div className="spacer-20px"></div>
                </div>
             </div>
-         </div>
+         </div> */}
 
          {/* ABOUT ME */}
          <div id="about_me" ref={refAboutMe}>
