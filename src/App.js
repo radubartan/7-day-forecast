@@ -63,8 +63,8 @@ function App() {
             <div className="col-6">
                <div id="header">
                   <li onClick={handleSelectionClick}>
-                     <div className="header_caps">SELECTION TABLE</div>
-                     <div className="header_subtitle">HTML <span className="color-lightGray">/</span> CSS <span className="color-lightGray">/</span> JavaScript</div>
+                     <div className="header_caps">WEATHER & GEO API</div>
+                     <div className="header_subtitle">JavaScript <span className="color-lightGray">/</span> HTML <span className="color-lightGray">/</span> CSS</div>
                   </li>
                   <li onClick={handleRequirementsClick}> {/* onClick="scrollto('requirements');" */}
                      <div className="header_caps">REQUIREMENTS</div>
@@ -88,8 +88,8 @@ function App() {
             <div className="row">
                <div className="col-3">
                   <div className="line_smallLeft"></div>
-                  <div className="left_headingPink">/ Selection Table</div>
-                  <div className="left_subHeading">HTML <span className="color-lightGray">/</span> CSS <span className="color-lightGray">/</span> JavaScript</div>
+                  <div className="left_headingPink">/ Weather & GEO API</div>
+                  <div className="left_subHeading">JavaScript <span className="color-lightGray">/</span> HTML <span className="color-lightGray">/</span> CSS</div>
                </div>
                <div className="col-9">
                   <div className="line_bigRightLight"></div>
